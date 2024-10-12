@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "网站二维码生成器",
+    "version": "1.0",
+    "description": "在当前页面右下角添加包含网站logo的二维码",
+    "permissions": [
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://api.qrserver.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "plugin.js"
+            ]
+        }
+    ],
+    "icons": {
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "action": {},
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "icons/icon-fg.svg"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
